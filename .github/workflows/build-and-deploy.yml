@@ -35,7 +35,7 @@ jobs:
       - name: bundle-install
         run: bundle install
       - name: build
-        run: bundle exec jekyll build
+        run: bundle exec jekyll build --baseurl='/release-test'
       - name: upload
         uses: actions/upload-pages-artifact@v1
         with:
