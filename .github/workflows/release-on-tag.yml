@@ -15,8 +15,6 @@ defaults:
 
 jobs:
   release-the-tag:
-    environment:
-      GITHUB_REPOSITORY: publiccodenet/release-test
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -39,3 +37,5 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: release-test-*.pdf
+# env:
+# GITHUB_REPOSITORY: publiccodenet/release-test
