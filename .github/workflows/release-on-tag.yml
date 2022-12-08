@@ -35,6 +35,7 @@ jobs:
       - name: upload
         uses: softprops/action-gh-release@v1
         with:
+          prerelease: true
           files: release-test-*.pdf
           body_path: >
             changelog/changelog-${{ steps.parse_version.outputs.TAG }}.md
