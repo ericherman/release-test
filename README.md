@@ -6,7 +6,7 @@
 This is a repository to experiment with automation of a release process:
 
 [`.github/workflows/release-on-tag.yml`](.github/workflows/release-on-tag.yml)
-[![release-on-tag](https://github.com/publiccodenet/release-test/actions/workflows/release-on-tag.yml/badge.svg?branch=main)](https://github.com/publiccodenet/release-test/actions/workflows/release-on-tag.yml)
+[actions/workflows/release-on-tag](https://github.com/publiccodenet/release-test/actions/workflows/release-on-tag.yml)
 
 
 It also has a custom build:
