@@ -31,7 +31,11 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: install-deps
-        run: sudo apt install -y ruby ruby-bundler
+        # https://yaml.org/spec/1.2-old/spec.html#style/block/folded
+        run: >
+          sudo apt install -y
+          ruby
+          ruby-bundler
       - name: bundle-install
         run: bundle install
       - name: build
