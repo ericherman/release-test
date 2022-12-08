@@ -14,6 +14,9 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
+      - name: parse_tag
+        id: parse_tag
+        run: echo ::set-output name=TAG::${GITHUB_REF/refs\/tags\//}
       - name: install-deps
         # https://yaml.org/spec/1.2.2/#65-line-folding
         run: >
@@ -33,3 +36,5 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: release-test-*.pdf
+          body_path: >
+            changelog/changelog-${{ steps.parse_version.outputs.TAG }}.md
