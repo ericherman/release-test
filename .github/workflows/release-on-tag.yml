@@ -22,12 +22,13 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: install-deps
-        run: | sudo apt install -y
-               ruby
-               ruby-bundler
-               fontconfig
-               python3.10-venv
-               python3-pip
+        run: |
+          sudo apt install -y
+          ruby
+          ruby-bundler
+          fontconfig
+          python3.10-venv
+          python3-pip
       - name: bundle-install
         run: bundle install
       - name: install-fonts
