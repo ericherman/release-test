@@ -8,15 +8,17 @@ defaults:
   run:
     shell: bash
 
+env:
+  TAG: ${GITHUB_REF/refs\/tags\//}
+
 jobs:
   release-the-tag:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: parse_tag
-        id: parse_tag
-        run: echo ::set-output name=TAG::${GITHUB_REF/refs\/tags\//}
+      - name: display-tag
+        run: echo "TAG=$TAG"
       - name: install-deps
         # https://yaml.org/spec/1.2.2/#65-line-folding
         run: >
@@ -38,4 +40,4 @@ jobs:
           prerelease: true
           files: release-test-*.pdf
           body_path: >
-            changelog/changelog-${{ steps.parse_version.outputs.TAG }}.md
+            changelog/changelog-${TAG}.md
