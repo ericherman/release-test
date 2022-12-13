@@ -3,3 +3,4 @@ vendor/
 *.pdf
 _site/
 _build_pdf/
+release.body
