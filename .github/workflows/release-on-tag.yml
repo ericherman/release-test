@@ -35,5 +35,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           prerelease: true
-          files: release-test-*.pdf release-test-*.epub
+          files: 
+            - release-test-*.pdf
+            - release-test-*.epub
           body_path: release.body

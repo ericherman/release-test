@@ -2,7 +2,7 @@
 # SPDX-FileCopyrightText: 2022 The Foundation for Public Code <info@publiccode.net>
 
 title: Release Test
-version: 0.0.11
+version: 0.0.12
 
 remote_theme: publiccodenet/jekyll-theme
 
