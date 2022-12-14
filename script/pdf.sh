@@ -108,4 +108,6 @@ ls -l release-test-$VERSION.pdf
 
 temp_weasyprint_info
 
+pandoc _build_pdf/index.html -o release-test-$VERSION.epub
+
 echo "done"
