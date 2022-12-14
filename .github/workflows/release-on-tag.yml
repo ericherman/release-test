@@ -23,6 +23,7 @@ jobs:
           fontconfig
           python3.10-venv
           python3-pip
+          pandoc
       - name: bundle-install
         run: bundle install
       - name: install-fonts
